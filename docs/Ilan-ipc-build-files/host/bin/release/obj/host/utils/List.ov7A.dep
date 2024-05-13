@@ -1,0 +1,27 @@
+bin//release/obj/host/utils/List.ov7A: ../host/utils/List.c \
+ /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/armv7at2hf-neon-linux-gnueabi/usr/include/stdc-predef.h \
+ /home/maaz/processor_sdk_rtos_am57xx_08_01_00_09/ipc_3_50_04_08/linux/include/ti/ipc/Std.h \
+ /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/armv7at2hf-neon-linux-gnueabi/usr/include/unistd.h \
+ /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/armv7at2hf-neon-linux-gnueabi/usr/include/features.h \
+ /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/armv7at2hf-neon-linux-gnueabi/usr/include/sys/cdefs.h \
+ /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/armv7at2hf-neon-linux-gnueabi/usr/include/bits/wordsize.h \
+ /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/armv7at2hf-neon-linux-gnueabi/usr/include/bits/long-double.h \
+ /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/armv7at2hf-neon-linux-gnueabi/usr/include/gnu/stubs.h \
+ /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/armv7at2hf-neon-linux-gnueabi/usr/include/gnu/stubs-hard.h \
+ /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/armv7at2hf-neon-linux-gnueabi/usr/include/bits/posix_opt.h \
+ /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/armv7at2hf-neon-linux-gnueabi/usr/include/bits/environments.h \
+ /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/armv7at2hf-neon-linux-gnueabi/usr/include/bits/types.h \
+ /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/armv7at2hf-neon-linux-gnueabi/usr/include/bits/timesize.h \
+ /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/armv7at2hf-neon-linux-gnueabi/usr/include/bits/typesizes.h \
+ /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/armv7at2hf-neon-linux-gnueabi/usr/include/bits/time64.h \
+ /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/lib/gcc/arm-none-linux-gnueabihf/9.2.1/include/stddef.h \
+ /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/armv7at2hf-neon-linux-gnueabi/usr/include/bits/confname.h \
+ /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/armv7at2hf-neon-linux-gnueabi/usr/include/bits/getopt_posix.h \
+ /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/armv7at2hf-neon-linux-gnueabi/usr/include/bits/getopt_core.h \
+ /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/armv7at2hf-neon-linux-gnueabi/usr/include/bits/unistd_ext.h \
+ /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/lib/gcc/arm-none-linux-gnueabihf/9.2.1/include/stdbool.h \
+ Std.h std_linux.h ../host/utils/List.h ../host/utils/Memory.h \
+ ../host/utils/IHeap.h \
+ /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/armv7at2hf-neon-linux-gnueabi/usr/include/assert.h \
+ ../host/utils/MemoryDefs.h ../host/utils/_MemoryDefs.h \
+ ../host/utils/Trace.h ../host/utils/Trace.h

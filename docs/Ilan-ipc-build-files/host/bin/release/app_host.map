@@ -1,0 +1,758 @@
+Archive member included to satisfy reference by file (symbol)
+
+/home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/./libc_nonshared.a(elf-init.oS)
+                              /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crt1.o (__libc_csu_init)
+/home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/libgcc.a(_udivsi3.o)
+                              bin//release/obj/host/HeapMem/src/HeapMem.ov7A (__aeabi_uidiv)
+/home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/libgcc.a(_dvmd_lnx.o)
+                              /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/libgcc.a(_udivsi3.o) (__aeabi_idiv0)
+
+Discarded input sections
+
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crt1.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crti.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/crtbegin.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 bin/release/obj/main_host.ov7A
+ .note.GNU-stack
+                0x0000000000000000        0x0 bin/release/obj/App.ov7A
+ .note.GNU-stack
+                0x0000000000000000        0x0 bin//release/obj/shared/bigdataxlat/bigdataxlat.ov7A
+ .note.GNU-stack
+                0x0000000000000000        0x0 bin//release/obj/host/SharedRegion/src/SharedRegion.ov7A
+ .note.GNU-stack
+                0x0000000000000000        0x0 bin//release/obj/host/HeapMem/src/HeapMem.ov7A
+ .note.GNU-stack
+                0x0000000000000000        0x0 bin//release/obj/host/utils/List.ov7A
+ .note.GNU-stack
+                0x0000000000000000        0x0 bin//release/obj/host/utils/Memory.ov7A
+ .note.GNU-stack
+                0x0000000000000000        0x0 bin//release/obj/host/utils/Cache.ov7A
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/./libc_nonshared.a(elf-init.oS)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/libgcc.a(_udivsi3.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/libgcc.a(_dvmd_lnx.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/crtend.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crt1.o
+LOAD /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crti.o
+LOAD /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/crtbegin.o
+LOAD bin/release/obj/main_host.ov7A
+LOAD bin/release/obj/App.ov7A
+LOAD bin//release/obj/shared/bigdataxlat/bigdataxlat.ov7A
+LOAD bin//release/obj/host/SharedRegion/src/SharedRegion.ov7A
+LOAD bin//release/obj/host/HeapMem/src/HeapMem.ov7A
+LOAD bin//release/obj/host/utils/List.ov7A
+LOAD bin//release/obj/host/utils/Memory.ov7A
+LOAD bin//release/obj/host/utils/Cache.ov7A
+LOAD /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/libpthread.so
+LOAD /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/libc.so
+START GROUP
+LOAD /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/../../lib/libc.so.6
+LOAD /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/./libc_nonshared.a
+LOAD /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/../../lib/ld-linux-armhf.so.3
+END GROUP
+LOAD /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/librt.so
+LOAD /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/libticmem.so
+LOAD /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/libtiipc.so
+LOAD /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/libtiipcutils.so
+LOAD /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/libtitransportrpmsg.so
+LOAD /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/libgcc.a
+LOAD /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/../../../../arm-none-linux-gnueabihf/lib/libgcc_s.so
+START GROUP
+LOAD /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/../../../../arm-none-linux-gnueabihf/lib/libgcc_s.so.1
+LOAD /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/libgcc.a
+END GROUP
+LOAD /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/libc.so
+START GROUP
+LOAD /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/../../lib/libc.so.6
+LOAD /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/./libc_nonshared.a
+LOAD /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/../../lib/ld-linux-armhf.so.3
+END GROUP
+LOAD /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/libgcc.a
+LOAD /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/../../../../arm-none-linux-gnueabihf/lib/libgcc_s.so
+START GROUP
+LOAD /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/../../../../arm-none-linux-gnueabihf/lib/libgcc_s.so.1
+LOAD /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/libgcc.a
+END GROUP
+LOAD /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/crtend.o
+LOAD /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crtn.o
+                [!provide]                        PROVIDE (__executable_start = SEGMENT_START ("text-segment", 0x10000))
+                0x0000000000010154                . = (SEGMENT_START ("text-segment", 0x10000) + SIZEOF_HEADERS)
+
+.interp         0x0000000000010154       0x19
+ *(.interp)
+ .interp        0x0000000000010154       0x19 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crt1.o
+
+.note.ABI-tag   0x0000000000010170       0x20
+ .note.ABI-tag  0x0000000000010170       0x20 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crt1.o
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash           0x0000000000010190      0x150
+ *(.hash)
+ .hash          0x0000000000010190      0x150 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crt1.o
+
+.gnu.hash       0x00000000000102e0      0x164
+ *(.gnu.hash)
+ .gnu.hash      0x00000000000102e0      0x164 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crt1.o
+
+.dynsym         0x0000000000010444      0x2d0
+ *(.dynsym)
+ .dynsym        0x0000000000010444      0x2d0 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crt1.o
+
+.dynstr         0x0000000000010714      0x2b4
+ *(.dynstr)
+ .dynstr        0x0000000000010714      0x2b4 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crt1.o
+
+.gnu.version    0x00000000000109c8       0x5a
+ *(.gnu.version)
+ .gnu.version   0x00000000000109c8       0x5a /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crt1.o
+
+.gnu.version_d  0x0000000000010a24        0x0
+ *(.gnu.version_d)
+ .gnu.version_d
+                0x0000000000010a24        0x0 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crt1.o
+
+.gnu.version_r  0x0000000000010a24       0x40
+ *(.gnu.version_r)
+ .gnu.version_r
+                0x0000000000010a24       0x40 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crt1.o
+
+.rel.dyn        0x0000000000010a64       0x10
+ *(.rel.init)
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ *(.rel.fini)
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ *(.rel.data.rel.ro .rel.data.rel.ro.* .rel.gnu.linkonce.d.rel.ro.*)
+ .rel.data.rel.ro
+                0x0000000000010a64        0x0 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crt1.o
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+ *(.rel.ctors)
+ *(.rel.dtors)
+ *(.rel.got)
+ .rel.got       0x0000000000010a64       0x10 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crt1.o
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+ .rel.bss       0x0000000000010a74        0x0 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crt1.o
+                [!provide]                        PROVIDE (__rel_iplt_start = .)
+ *(.rel.iplt)
+ .rel.iplt      0x0000000000010a74        0x0 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crt1.o
+                [!provide]                        PROVIDE (__rel_iplt_end = .)
+
+.rela.dyn       0x0000000000010a74        0x0
+ *(.rela.init)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rela.fini)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rela.ctors)
+ *(.rela.dtors)
+ *(.rela.got)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+                [!provide]                        PROVIDE (__rela_iplt_start = .)
+ *(.rela.iplt)
+                [!provide]                        PROVIDE (__rela_iplt_end = .)
+
+.rel.plt        0x0000000000010a74      0x148
+ *(.rel.plt)
+ .rel.plt       0x0000000000010a74      0x148 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crt1.o
+
+.rela.plt
+ *(.rela.plt)
+
+.init           0x0000000000010bbc        0xc
+ *(SORT_NONE(.init))
+ .init          0x0000000000010bbc        0x8 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crti.o
+                0x0000000000010bbc                _init
+ .init          0x0000000000010bc4        0x4 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crtn.o
+
+.plt            0x0000000000010bc8      0x21c
+ *(.plt)
+ .plt           0x0000000000010bc8      0x21c /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crt1.o
+                0x0000000000010be0                calloc@@GLIBC_2.4
+                0x0000000000010bec                CMEM_getPool
+                0x0000000000010bf8                MessageQ_close
+                0x0000000000010c04                raise@@GLIBC_2.4
+                0x0000000000010c10                MultiProc_getName
+                0x0000000000010c1c                CMEM_init
+                0x0000000000010c28                strcmp@@GLIBC_2.4
+                0x0000000000010c34                MessageQ_alloc
+                0x0000000000010c40                MessageQ_put
+                0x0000000000010c4c                CMEM_free
+                0x0000000000010c58                printf@@GLIBC_2.4
+                0x0000000000010c68                free@@GLIBC_2.4
+                0x0000000000010c74                Ipc_transportConfig
+                0x0000000000010c80                sleep@@GLIBC_2.4
+                0x0000000000010c8c                MessageQ_open
+                0x0000000000010c9c                CMEM_cacheInv
+                0x0000000000010ca8                MessageQ_Params_init__S
+                0x0000000000010cb4                MessageQ_delete
+                0x0000000000010cc0                puts@@GLIBC_2.4
+                0x0000000000010cd0                malloc@@GLIBC_2.4
+                0x0000000000010cdc                __libc_start_main@@GLIBC_2.4
+                0x0000000000010ce8                MessageQ_create
+                0x0000000000010d00                MessageQ_setReplyQueue
+                0x0000000000010d0c                exit@@GLIBC_2.4
+                0x0000000000010d18                MultiProc_getNumProcessors
+                0x0000000000010d24                strlen@@GLIBC_2.4
+                0x0000000000010d34                memset@@GLIBC_2.4
+                0x0000000000010d40                strncpy@@GLIBC_2.4
+                0x0000000000010d4c                MessageQ_get
+                0x0000000000010d58                CMEM_getPhys
+                0x0000000000010d64                Ipc_start
+                0x0000000000010d74                CMEM_cacheWbInv
+                0x0000000000010d80                CMEM_allocPool
+                0x0000000000010d8c                sprintf@@GLIBC_2.4
+                0x0000000000010d98                MultiProc_self
+                0x0000000000010da8                CMEM_cacheWb
+                0x0000000000010db4                abort@@GLIBC_2.4
+                0x0000000000010dc0                Ipc_stop
+                0x0000000000010dcc                MultiProc_getId
+                0x0000000000010dd8                MessageQ_free
+
+.iplt           0x0000000000010de4        0x0
+ *(.iplt)
+ .iplt          0x0000000000010de4        0x0 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crt1.o
+
+.text           0x0000000000010de8     0x1f7c
+ *(.text.unlikely .text.*_unlikely .text.unlikely.*)
+ *(.text.exit .text.exit.*)
+ *(.text.startup .text.startup.*)
+ .text.startup  0x0000000000010de8      0x1bc bin/release/obj/main_host.ov7A
+                0x0000000000010de8                main
+ *(.text.hot .text.hot.*)
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x0000000000010fa4       0x30 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crt1.o
+                0x0000000000010fa4                _start
+ .text          0x0000000000010fd4       0x24 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crti.o
+ .text          0x0000000000010ff8       0x6c /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/crtbegin.o
+ .text          0x0000000000011064        0x0 bin/release/obj/main_host.ov7A
+ *fill*         0x0000000000011064        0x4 
+ .text          0x0000000000011068      0x6f0 bin/release/obj/App.ov7A
+                0x0000000000011068                App_create
+                0x0000000000011120                App_delete
+                0x0000000000011158                App_exec
+ .text          0x0000000000011758       0x78 bin//release/obj/shared/bigdataxlat/bigdataxlat.ov7A
+                0x0000000000011758                bigDataXlatetoGlobalAndSync
+                0x0000000000011794                bigDataXlatetoLocalAndSync
+ .text          0x00000000000117d0      0x7bc bin//release/obj/host/SharedRegion/src/SharedRegion.ov7A
+                0x00000000000117d0                SharedRegion_getConfig
+                0x00000000000117e4                SharedRegion_setup
+                0x00000000000118d4                SharedRegion_destroy
+                0x0000000000011934                _SharedRegion_isStarted
+                0x0000000000011944                SharedRegion_start
+                0x0000000000011980                SharedRegion_attach
+                0x00000000000119b0                SharedRegion_detach
+                0x00000000000119f0                SharedRegion_getPtr
+                0x0000000000011a28                SharedRegion_getSRPtr
+                0x0000000000011a6c                SharedRegion_translateEnabled
+                0x0000000000011a78                SharedRegion_getNumRegions
+                0x0000000000011a84                SharedRegion_setEntry
+                0x0000000000011b4c                SharedRegion_clearEntry
+                0x0000000000011b9c                SharedRegion_clearReservedMemory
+                0x0000000000011c10                SharedRegion_entryInit
+                0x0000000000011c30                SharedRegion_stop
+                0x0000000000011cc4                SharedRegion_getHeap
+                0x0000000000011cc8                SharedRegion_getId
+                0x0000000000011d10                SharedRegion_getIdByName
+                0x0000000000011d54                SharedRegion_getEntry
+                0x0000000000011d88                SharedRegion_getCacheLineSize
+                0x0000000000011db8                SharedRegion_isCacheEnabled
+                0x0000000000011de8                SharedRegion_invalidSRPtr
+                0x0000000000011df0                SharedRegion_reserveMemory
+                0x0000000000011e38                SharedRegion_unreserveMemory
+                0x0000000000011e78                SharedRegion_getRegionInfo
+                0x0000000000011eac                _SharedRegion_setEntry
+                0x0000000000011f30                _SharedRegion_getIdPhys
+                0x0000000000011f78                SharedRegion_getEntryPtr
+ .text          0x0000000000011f8c      0x910 bin//release/obj/host/HeapMem/src/HeapMem.ov7A
+                0x0000000000011f8c                HeapMem_isBlocking
+                0x0000000000011f90                HeapMem_getKnlHandle
+                0x0000000000011f94                HeapMem_getStats
+                0x0000000000011ffc                HeapMem_alloc
+                0x000000000001215c                HeapMem_free
+                0x0000000000012274                HeapMem_getConfig
+                0x0000000000012288                HeapMem_setup
+                0x00000000000122fc                HeapMem_Params_init
+                0x000000000001231c                HeapMem_delete
+                0x00000000000123b4                HeapMem_close
+                0x0000000000012418                HeapMem_destroy
+                0x0000000000012498                HeapMem_getExtendedStats
+                0x00000000000124a4                HeapMem_sharedMemReq
+                0x00000000000124e8                HeapMem_getGate
+                0x00000000000124f0                HeapMem_restore
+                0x000000000001252c                HeapMem_postInit
+                0x00000000000125d8                _HeapMem_create
+                0x0000000000012790                HeapMem_create
+                0x00000000000127bc                HeapMem_openByAddr
+                0x0000000000012848                HeapMem_open
+ .text          0x000000000001289c      0x144 bin//release/obj/host/utils/List.ov7A
+                0x000000000001289c                List_Params_init
+                0x00000000000128a0                List_create
+                0x00000000000128bc                List_delete
+                0x00000000000128d8                List_construct
+                0x00000000000128e4                List_destruct
+                0x00000000000128f0                List_elemClear
+                0x00000000000128fc                List_empty
+                0x000000000001290c                List_next
+                0x0000000000012928                List_prev
+                0x0000000000012940                List_insert
+                0x0000000000012960                List_remove
+                0x0000000000012974                List_dequeue
+                0x000000000001298c                List_get
+                0x0000000000012994                List_enqueue
+                0x00000000000129ac                List_put
+                0x00000000000129bc                List_enqueueHead
+                0x00000000000129d0                List_putHead
+ .text          0x00000000000129e0       0xac bin//release/obj/host/utils/Memory.ov7A
+                0x00000000000129e0                Memory_free
+                0x00000000000129f4                Memory_getStats
+                0x00000000000129fc                Memory_query
+                0x0000000000012a10                Memory_getMaxDefaultTypeAlign
+                0x0000000000012a14                Memory_alloc
+                0x0000000000012a48                Memory_valloc
+                0x0000000000012a6c                Memory_calloc
+ .text          0x0000000000012a8c        0xc bin//release/obj/host/utils/Cache.ov7A
+                0x0000000000012a8c                Cache_inv
+                0x0000000000012a90                Cache_wb
+                0x0000000000012a94                Cache_wbInv
+ .text          0x0000000000012a98       0x44 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/./libc_nonshared.a(elf-init.oS)
+                0x0000000000012a98                __libc_csu_init
+                0x0000000000012ad8                __libc_csu_fini
+ *fill*         0x0000000000012adc        0x4 
+ .text          0x0000000000012ae0      0x278 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/libgcc.a(_udivsi3.o)
+                0x0000000000012ae0                __aeabi_uidiv
+                0x0000000000012ae0                __udivsi3
+                0x0000000000012d3c                __aeabi_uidivmod
+ .text          0x0000000000012d58        0xc /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/libgcc.a(_dvmd_lnx.o)
+                0x0000000000012d58                __aeabi_ldiv0
+                0x0000000000012d58                __aeabi_idiv0
+ .text          0x0000000000012d64        0x0 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/crtend.o
+ .text          0x0000000000012d64        0x0 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crtn.o
+ *(.gnu.warning)
+ *(.glue_7t)
+ .glue_7t       0x0000000000012d64        0x0 linker stubs
+ *(.glue_7)
+ .glue_7        0x0000000000012d64        0x0 linker stubs
+ *(.vfp11_veneer)
+ .vfp11_veneer  0x0000000000012d64        0x0 linker stubs
+ *(.v4_bx)
+ .v4_bx         0x0000000000012d64        0x0 linker stubs
+
+.fini           0x0000000000012d64        0x8
+ *(SORT_NONE(.fini))
+ .fini          0x0000000000012d64        0x4 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crti.o
+                0x0000000000012d64                _fini
+ .fini          0x0000000000012d68        0x4 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crtn.o
+                [!provide]                        PROVIDE (__etext = .)
+                [!provide]                        PROVIDE (_etext = .)
+                [!provide]                        PROVIDE (etext = .)
+
+.rodata         0x0000000000012d6c      0x674
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata.cst4   0x0000000000012d6c        0x4 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crt1.o
+                0x0000000000012d6c                _IO_stdin_used
+ .rodata.str1.4
+                0x0000000000012d70      0x226 bin/release/obj/main_host.ov7A
+ *fill*         0x0000000000012f96        0x2 
+ .rodata.str1.4
+                0x0000000000012f98      0x43e bin/release/obj/App.ov7A
+ *fill*         0x00000000000133d6        0x2 
+ .rodata        0x00000000000133d8        0x8 bin//release/obj/host/SharedRegion/src/SharedRegion.ov7A
+                0x00000000000133d8                SharedRegion_VERSION
+                0x00000000000133dc                SharedRegion_CREATED
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab      0x00000000000133e0        0x0
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+ .ARM.extab     0x00000000000133e0        0x0 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crt1.o
+                [!provide]                        PROVIDE (__exidx_start = .)
+
+.ARM.exidx      0x00000000000133e0        0x8
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+ .ARM.exidx     0x00000000000133e0        0x8 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crt1.o
+                [!provide]                        PROVIDE (__exidx_end = .)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+ *(.eh_frame_entry .eh_frame_entry.*)
+
+.eh_frame       0x00000000000133e8        0x4
+ *(.eh_frame)
+ .eh_frame      0x00000000000133e8        0x4 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/crtend.o
+ *(.eh_frame.*)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.gnu_extab
+ *(.gnu_extab*)
+
+.exception_ranges
+ *(.exception_ranges*)
+                0x0000000000023ed8                . = DATA_SEGMENT_ALIGN (CONSTANT (MAXPAGESIZE), CONSTANT (COMMONPAGESIZE))
+
+.eh_frame
+ *(.eh_frame)
+ *(.eh_frame.*)
+
+.gnu_extab
+ *(.gnu_extab)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.exception_ranges
+ *(.exception_ranges*)
+
+.tdata          0x0000000000023ed8        0x0
+                [!provide]                        PROVIDE (__tdata_start = .)
+ *(.tdata .tdata.* .gnu.linkonce.td.*)
+
+.tbss
+ *(.tbss .tbss.* .gnu.linkonce.tb.*)
+ *(.tcommon)
+
+.preinit_array  0x0000000000023ed8        0x0
+                [!provide]                        PROVIDE (__preinit_array_start = .)
+ *(.preinit_array)
+                [!provide]                        PROVIDE (__preinit_array_end = .)
+
+.init_array     0x0000000000023ed8        0x4
+                0x0000000000023ed8                PROVIDE (__init_array_start = .)
+ *(SORT_BY_INIT_PRIORITY(.init_array.*) SORT_BY_INIT_PRIORITY(.ctors.*))
+ *(.init_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .ctors)
+ .init_array    0x0000000000023ed8        0x4 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/crtbegin.o
+                0x0000000000023edc                PROVIDE (__init_array_end = .)
+
+.fini_array     0x0000000000023edc        0x4
+                [!provide]                        PROVIDE (__fini_array_start = .)
+ *(SORT_BY_INIT_PRIORITY(.fini_array.*) SORT_BY_INIT_PRIORITY(.dtors.*))
+ *(.fini_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .dtors)
+ .fini_array    0x0000000000023edc        0x4 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/crtbegin.o
+                [!provide]                        PROVIDE (__fini_array_end = .)
+
+.ctors
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
+ *(SORT_BY_NAME(.ctors.*))
+ *(.ctors)
+
+.dtors
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
+ *(SORT_BY_NAME(.dtors.*))
+ *(.dtors)
+
+.jcr
+ *(.jcr)
+
+.data.rel.ro    0x0000000000023ee0        0x0
+ *(.data.rel.ro.local* .gnu.linkonce.d.rel.ro.local.*)
+ *(.data.rel.ro .data.rel.ro.* .gnu.linkonce.d.rel.ro.*)
+ .data.rel.ro   0x0000000000023ee0        0x0 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crt1.o
+
+.dynamic        0x0000000000023ee0      0x120
+ *(.dynamic)
+ .dynamic       0x0000000000023ee0      0x120 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crt1.o
+                0x0000000000023ee0                _DYNAMIC
+                0x0000000000024000                . = DATA_SEGMENT_RELRO_END (., 0x0)
+
+.got            0x0000000000024000       0xcc
+ *(.got.plt)
+ .got.plt       0x0000000000024000       0xb0 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crt1.o
+                0x0000000000024000                _GLOBAL_OFFSET_TABLE_
+ *(.igot.plt)
+ .igot.plt      0x00000000000240b0        0x0 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crt1.o
+ *(.got)
+ .got           0x00000000000240b0       0x1c /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crt1.o
+ *(.igot)
+
+.data           0x00000000000240cc       0x64
+                [!provide]                        PROVIDE (__data_start = .)
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x00000000000240cc        0x4 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crt1.o
+                0x00000000000240cc                data_start
+                0x00000000000240cc                __data_start
+ .data          0x00000000000240d0        0x0 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crti.o
+ .data          0x00000000000240d0        0x4 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/crtbegin.o
+                0x00000000000240d0                __dso_handle
+ .data          0x00000000000240d4        0x0 bin/release/obj/main_host.ov7A
+ .data          0x00000000000240d4        0x0 bin/release/obj/App.ov7A
+ .data          0x00000000000240d4        0x0 bin//release/obj/shared/bigdataxlat/bigdataxlat.ov7A
+ .data          0x00000000000240d4       0x28 bin//release/obj/host/SharedRegion/src/SharedRegion.ov7A
+ .data          0x00000000000240fc       0x34 bin//release/obj/host/HeapMem/src/HeapMem.ov7A
+ .data          0x0000000000024130        0x0 bin//release/obj/host/utils/List.ov7A
+ .data          0x0000000000024130        0x0 bin//release/obj/host/utils/Memory.ov7A
+ .data          0x0000000000024130        0x0 bin//release/obj/host/utils/Cache.ov7A
+ .data          0x0000000000024130        0x0 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/./libc_nonshared.a(elf-init.oS)
+ .data          0x0000000000024130        0x0 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/libgcc.a(_udivsi3.o)
+ .data          0x0000000000024130        0x0 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/libgcc.a(_dvmd_lnx.o)
+ .data          0x0000000000024130        0x0 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/crtend.o
+ .data          0x0000000000024130        0x0 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crtn.o
+
+.tm_clone_table
+                0x0000000000024130        0x0
+ .tm_clone_table
+                0x0000000000024130        0x0 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/crtbegin.o
+ .tm_clone_table
+                0x0000000000024130        0x0 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/crtend.o
+
+.data1
+ *(.data1)
+                0x0000000000024130                _edata = .
+                [!provide]                        PROVIDE (edata = .)
+                0x0000000000024130                . = .
+                0x0000000000024130                __bss_start = .
+                0x0000000000024130                __bss_start__ = .
+
+.bss            0x0000000000024130       0x18
+ *(.dynbss)
+ .dynbss        0x0000000000024130        0x0 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crt1.o
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x0000000000024130        0x0 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crt1.o
+ .bss           0x0000000000024130        0x0 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crti.o
+ .bss           0x0000000000024130        0x1 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/crtbegin.o
+ *fill*         0x0000000000024131        0x3 
+ .bss           0x0000000000024134        0x4 bin/release/obj/main_host.ov7A
+ .bss           0x0000000000024138       0x10 bin/release/obj/App.ov7A
+ .bss           0x0000000000024148        0x0 bin//release/obj/shared/bigdataxlat/bigdataxlat.ov7A
+ .bss           0x0000000000024148        0x0 bin//release/obj/host/SharedRegion/src/SharedRegion.ov7A
+ .bss           0x0000000000024148        0x0 bin//release/obj/host/HeapMem/src/HeapMem.ov7A
+ .bss           0x0000000000024148        0x0 bin//release/obj/host/utils/List.ov7A
+ .bss           0x0000000000024148        0x0 bin//release/obj/host/utils/Memory.ov7A
+ .bss           0x0000000000024148        0x0 bin//release/obj/host/utils/Cache.ov7A
+ .bss           0x0000000000024148        0x0 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/./libc_nonshared.a(elf-init.oS)
+ .bss           0x0000000000024148        0x0 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/libgcc.a(_udivsi3.o)
+ .bss           0x0000000000024148        0x0 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/libgcc.a(_dvmd_lnx.o)
+ .bss           0x0000000000024148        0x0 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/crtend.o
+ .bss           0x0000000000024148        0x0 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crtn.o
+ *(COMMON)
+                0x0000000000024148                . = ALIGN ((. != 0x0)?0x4:0x1)
+                0x0000000000024148                _bss_end__ = .
+                0x0000000000024148                __bss_end__ = .
+                0x0000000000024148                . = ALIGN (0x4)
+                0x0000000000024148                . = SEGMENT_START ("ldata-segment", .)
+                0x0000000000024148                . = ALIGN (0x4)
+                0x0000000000024148                __end__ = .
+                0x0000000000024148                _end = .
+                [!provide]                        PROVIDE (end = .)
+                0x0000000000024148                . = DATA_SEGMENT_END (.)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x5a
+ *(.comment)
+ .comment       0x0000000000000000       0x5a /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crt1.o
+                                         0xb6 (size before relaxing)
+ .comment       0x000000000000005a       0x5b /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/crtbegin.o
+ .comment       0x000000000000005a       0x5b bin/release/obj/main_host.ov7A
+ .comment       0x000000000000005a       0x5b bin/release/obj/App.ov7A
+ .comment       0x000000000000005a       0x5b bin//release/obj/shared/bigdataxlat/bigdataxlat.ov7A
+ .comment       0x000000000000005a       0x5b bin//release/obj/host/SharedRegion/src/SharedRegion.ov7A
+ .comment       0x000000000000005a       0x5b bin//release/obj/host/HeapMem/src/HeapMem.ov7A
+ .comment       0x000000000000005a       0x5b bin//release/obj/host/utils/List.ov7A
+ .comment       0x000000000000005a       0x5b bin//release/obj/host/utils/Memory.ov7A
+ .comment       0x000000000000005a       0x5b bin//release/obj/host/utils/Cache.ov7A
+ .comment       0x000000000000005a       0x5b /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/./libc_nonshared.a(elf-init.oS)
+ .comment       0x000000000000005a       0x5b /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/crtend.o
+
+.ARM.attributes
+                0x0000000000000000       0x35
+ .ARM.attributes
+                0x0000000000000000       0x35 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crt1.o
+ .ARM.attributes
+                0x0000000000000035       0x25 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crti.o
+ .ARM.attributes
+                0x000000000000005a       0x35 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/crtbegin.o
+ .ARM.attributes
+                0x000000000000008f       0x35 bin/release/obj/main_host.ov7A
+ .ARM.attributes
+                0x00000000000000c4       0x35 bin/release/obj/App.ov7A
+ .ARM.attributes
+                0x00000000000000f9       0x35 bin//release/obj/shared/bigdataxlat/bigdataxlat.ov7A
+ .ARM.attributes
+                0x000000000000012e       0x35 bin//release/obj/host/SharedRegion/src/SharedRegion.ov7A
+ .ARM.attributes
+                0x0000000000000163       0x35 bin//release/obj/host/HeapMem/src/HeapMem.ov7A
+ .ARM.attributes
+                0x0000000000000198       0x35 bin//release/obj/host/utils/List.ov7A
+ .ARM.attributes
+                0x00000000000001cd       0x35 bin//release/obj/host/utils/Memory.ov7A
+ .ARM.attributes
+                0x0000000000000202       0x35 bin//release/obj/host/utils/Cache.ov7A
+ .ARM.attributes
+                0x0000000000000237       0x37 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/./libc_nonshared.a(elf-init.oS)
+ .ARM.attributes
+                0x000000000000026e       0x23 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/libgcc.a(_udivsi3.o)
+ .ARM.attributes
+                0x0000000000000291       0x23 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/libgcc.a(_dvmd_lnx.o)
+ .ARM.attributes
+                0x00000000000002b4       0x35 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/crtend.o
+ .ARM.attributes
+                0x00000000000002e9       0x25 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crtn.o
+
+.gnu.build.attributes
+ *(.gnu.build.attributes .gnu.build.attributes.*)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000       0xf0
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0x38 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crt1.o
+ .debug_aranges
+                0x0000000000000038       0x30 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crti.o
+ .debug_aranges
+                0x0000000000000068       0x20 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/./libc_nonshared.a(elf-init.oS)
+ .debug_aranges
+                0x0000000000000088       0x20 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/libgcc.a(_udivsi3.o)
+ .debug_aranges
+                0x00000000000000a8       0x20 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/libgcc.a(_dvmd_lnx.o)
+ .debug_aranges
+                0x00000000000000c8       0x28 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crtn.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000      0x29e
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x0000000000000000       0x62 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crt1.o
+ .debug_info    0x0000000000000062       0x22 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crti.o
+ .debug_info    0x0000000000000084      0x1ac /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/./libc_nonshared.a(elf-init.oS)
+ .debug_info    0x0000000000000230       0x26 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/libgcc.a(_udivsi3.o)
+ .debug_info    0x0000000000000256       0x26 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/libgcc.a(_dvmd_lnx.o)
+ .debug_info    0x000000000000027c       0x22 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crtn.o
+
+.debug_abbrev   0x0000000000000000      0x1c6
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000       0x49 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crt1.o
+ .debug_abbrev  0x0000000000000049       0x12 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crti.o
+ .debug_abbrev  0x000000000000005b      0x131 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/./libc_nonshared.a(elf-init.oS)
+ .debug_abbrev  0x000000000000018c       0x14 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/libgcc.a(_udivsi3.o)
+ .debug_abbrev  0x00000000000001a0       0x14 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/libgcc.a(_dvmd_lnx.o)
+ .debug_abbrev  0x00000000000001b4       0x12 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crtn.o
+
+.debug_line     0x0000000000000000      0x447
+ *(.debug_line .debug_line.* .debug_line_end)
+ .debug_line    0x0000000000000000       0x80 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crt1.o
+ .debug_line    0x0000000000000080       0x6c /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crti.o
+ .debug_line    0x00000000000000ec      0x183 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/./libc_nonshared.a(elf-init.oS)
+ .debug_line    0x000000000000026f       0xcf /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/libgcc.a(_udivsi3.o)
+ .debug_line    0x000000000000033e       0xb5 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/libgcc.a(_dvmd_lnx.o)
+ .debug_line    0x00000000000003f3       0x54 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crtn.o
+
+.debug_frame    0x0000000000000000       0x8c
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000       0x44 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/./libc_nonshared.a(elf-init.oS)
+ .debug_frame   0x0000000000000044       0x20 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/libgcc.a(_udivsi3.o)
+ .debug_frame   0x0000000000000064       0x28 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/libgcc.a(_dvmd_lnx.o)
+
+.debug_str      0x0000000000000000      0x4a9
+ *(.debug_str)
+ .debug_str     0x0000000000000000      0x18e /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crt1.o
+                                        0x348 (size before relaxing)
+ .debug_str     0x000000000000018e       0x16 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crti.o
+                                         0x8c (size before relaxing)
+ .debug_str     0x00000000000001a4      0x1cd /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/./libc_nonshared.a(elf-init.oS)
+                                        0x23b (size before relaxing)
+ .debug_str     0x0000000000000371      0x122 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/libgcc.a(_udivsi3.o)
+                                        0x130 (size before relaxing)
+ .debug_str     0x0000000000000493      0x130 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../lib/gcc/arm-none-linux-gnueabihf/9.2.1/libgcc.a(_dvmd_lnx.o)
+ .debug_str     0x0000000000000493       0x16 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crtn.o
+                                         0x8c (size before relaxing)
+
+.debug_loc      0x0000000000000000       0xfb
+ *(.debug_loc)
+ .debug_loc     0x0000000000000000       0xfb /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/./libc_nonshared.a(elf-init.oS)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x0000000000000000       0x48
+ *(.debug_ranges)
+ .debug_ranges  0x0000000000000000       0x28 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crti.o
+ .debug_ranges  0x0000000000000028       0x20 /home/maaz/ti-processor-sdk-linux-am57xx-evm-08_02_01_00/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/../arm-none-linux-gnueabihf/libc/usr/lib/crtn.o
+
+.debug_macro
+ *(.debug_macro)
+
+.debug_addr
+ *(.debug_addr)
+
+.gnu.attributes
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+
+/DISCARD/
+ *(.note.GNU-stack)
+ *(.gnu_debuglink)
+ *(.gnu.lto_*)
+OUTPUT(bin//release/app_host elf32-littlearm)
