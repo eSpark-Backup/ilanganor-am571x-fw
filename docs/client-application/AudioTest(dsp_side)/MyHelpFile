@@ -1,0 +1,5 @@
+
+#include <ti/csl/soc/am571x/src/cslr_soc_dsp_baseaddress.h>
+
+#include <ti/csl/soc/am571x/src/cslr_soc_aliases.h>
+#include <ti/csl/soc/am571x/src/cslr_core_cm_core.h>

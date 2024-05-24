@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="windows-1255"?>
+<!--  This file conforms to the DTD xdc/bld/build.dtd -->
+<package name="xconfig_AudioTest" version="" producerId="undefined">
+    <units>
+    </units>
+    <sources>
+        <srcFile name="package/cfg/AudioTest_pe66.c"/>
+    </sources>
+    <configscripts>
+        <srcFile name="E:/Projects/workspace_SVT2/AudioTest/AudioTest.cfg"/>
+    </configscripts>
+    <makefiles>
+        <srcFile name="package.mak" src="package.bld"/>
+        <srcFile name="package/package.xdc.dep" src="package.xdc"/>
+        <srcFile name="package/cfg/AudioTest_pe66.mak" src="package.bld"/>
+        <srcFile name="package/cfg/AudioTest_pe66.oe66.dep" src="package/cfg/AudioTest_pe66.c"/>
+        <srcFile name="package/cfg/AudioTest_pe66.dep" src="package/cfg/AudioTest_pe66.cfg"/>
+        <srcFile name="package/cfg/AudioTest.xe66.mak" src="package.bld"/>
+        <srcFile name="package/rel/xconfig_AudioTest.tar.dep" src="package/rel/xconfig_AudioTest.xdc.inc"/>
+    </makefiles>
+    <targets>
+        <target name="ti.targets.elf.C66"
+            version="ti.targets.elf.C66{1,0,8.3,10"
+            rawVersion="8.3.10"
+            platform="ti.platforms.simTCI6616"
+            isa="66"
+            suffix="e66"
+            rootDir="C:/ti/ccs1040/ccs/tools/compiler/ti-cgt-c6000_8.3.10"
+            os="undefined"
+            rts="ti.targets.rts6000">
+            <model endian="little"
+                codeModel="undefined"
+                dataModel="undefined"/>
+        </target>
+    </targets>
+    <libraries>
+    </libraries>
+    <configurations>
+    <configuration name="AudioTest"
+        pname="AudioTest.pe66"
+        target="ti.targets.elf.C66"
+        platform="ti.platforms.evmAM571X:DSP1"
+        profile="release"
+        isPartial="false"
+        xCfgScript="package/cfg/AudioTest_pe66.cfg"
+        xCfgPrefix="package/cfg/AudioTest_pe66"
+        cfgScript="E:/Projects/workspace_SVT2/AudioTest/AudioTest.cfg"
+        cfgArgs="null"
+        />
+    </configurations>
+    <executables>
+    <executable name="AudioTest"
+        pname="AudioTest.xe66"
+        target="ti.targets.elf.C66"
+        platform="ti.platforms.evmAM571X:DSP1"
+        profile="release"
+        xCfgScript="package/cfg/AudioTest_pe66.cfg"
+        xCfgPrefix="package/cfg/AudioTest_pe66"
+        cfgScript="E:/Projects/workspace_SVT2/AudioTest/AudioTest.cfg"
+        cfgArgs="null"
+        />
+    </executables>
+    <tests>
+    <test exeName="AudioTest.xe66"
+        args=""
+        groupName="AudioTest.xe66"
+        refOutput="undefined"
+        refExitCode="0"
+        execArgs=""
+        />
+    </tests>
+    <releases relDir="package/rel/">
+    <release name="xconfig_AudioTest"
+        pname="xconfig_AudioTest.tar"
+        label="default"
+    >
+        <file name="package/package.bld.xml"/>
+        <file name="package/build.cfg"/>
+        <file name="package/package.xdc.inc"/>
+    </release>
+    </releases>
+    <repositories>
+    </repositories>
+</package>

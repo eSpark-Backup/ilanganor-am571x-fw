@@ -1,65 +1,106 @@
-# General Project Configuration
-CC = /home/administrator/ti-processor-sdk-linux-am57xx-evm-08_02_01_00b/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/arm-none-linux-gnueabihf-gcc
-LD = $(CC)
-AR = /home/administrator/ti-processor-sdk-linux-am57xx-evm-08_02_01_00b/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/arm-none-linux-gnueabihf-ar
-RM = rm -f
-RMDIR = rm -rf
-MKDIR = mkdir -p
-CP = cp
-ECHO = echo
+#
+#  Copyright (c) 2012-2018 Texas Instruments Incorporated - http://www.ti.com
+#  All rights reserved.
+#
+#  Redistribution and use in source and binary forms, with or without
+#  modification, are permitted provided that the following conditions
+#  are met:
+#
+#  *  Redistributions of source code must retain the above copyright
+#     notice, this list of conditions and the following disclaimer.
+#
+#  *  Redistributions in binary form must reproduce the above copyright
+#     notice, this list of conditions and the following disclaimer in the
+#     documentation and/or other materials provided with the distribution.
+#
+#  *  Neither the name of Texas Instruments Incorporated nor the names of
+#     its contributors may be used to endorse or promote products derived
+#     from this software without specific prior written permission.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+#  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+#  THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+#  PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+#  CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+#  EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+#  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+#  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+#  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+#  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
 
-# Path to the development kit and the sysroots
-DEVKIT_PATH = /home/administrator/processor_sdk_rtos_am57xx_08_01_00_09/ipc_3_50_04_08/linux
-SYSROOT_PATH = /home/administrator/ti-processor-sdk-linux-am57xx-evm-08_02_01_00b/linux-devkit/sysroots/armv7at2hf-neon-linux-gnueabi
+#
+#  ======== makefile ========
+#
 
-# Compiler and Linker Configurations
-CPPFLAGS = -D_REENTRANT -I$(DEVKIT_PATH)/include -I$(SYSROOT_PATH)/usr/include
-CFLAGS = --sysroot=$(SYSROOT_PATH) $(CCPROFILE_$(PROFILE))
-LDFLAGS = -L$(DEVKIT_PATH)/src/api/.libs -L$(DEVKIT_PATH)/src/utils/.libs -L$(DEVKIT_PATH)/src/transport/.libs -L$(SYSROOT_PATH)/usr/lib --sysroot=$(SYSROOT_PATH)
+# edit PROCLIST list to control how many executables to build
+PROCLIST = dsp1 dsp2 ipu1 ipu2 host
 
-# Libraries to link against
-LDLIBS = -lc -lpthread -lrt -ltiipc -ltiipcutils -ltitransportrpmsg
+EXBASE = .
+include $(EXBASE)/products.mak
+.PHONY: $(PROCLIST)
 
-# Conditional Debug and Release Settings
-CCPROFILE_debug = -ggdb -DDEBUG
-CCPROFILE_release = -O3 -DNDEBUG
-LDPROFILE_debug = -ggdb
-LDPROFILE_release = -O3
+.PHONY: install
 
-# Object Files and Executables Directories
-OBJ_DIR = bin/$(PROFILE)/obj
-BIN_DIR = bin/$(PROFILE)
+all: $(PROCLIST)
 
-# Source Files
-SRCS = main_host.c App.c
-OBJS = $(SRCS:%.c=$(OBJ_DIR)/%.ov7A)
+$(PROCLIST):
+	@$(ECHO) "#"
+	@$(ECHO) "# Making $@ ..."
+	$(MAKE) -C $@ PROCLIST="$(PROCLIST)"
 
-# Default target
-all: debug release
+help:
+	@$(ECHO) "make                                  # build executables"
+	@$(ECHO) "make clean                            # clean everything"
+	@$(ECHO) "make install EXEC_DIR=/.../testbench  # install folder"
 
-debug release:
-	@$(MAKE) app_host PROFILE=$@
+# setup install goal
+ifeq ($(filter $(MAKECMDGOALS),install install_rov),$(MAKECMDGOALS))
+ifeq (,$(EXEC_DIR))
+EXEC_DIR=$(CURDIR)/install
+endif
+override EXEC_DIR:=$(EXEC_DIR)/ex02_messageq
+endif
 
-app_host: $(BIN_DIR)/app_host
+install: $(PROCLIST) $(addsuffix _install,$(PROCLIST))
+$(addsuffix _install,$(PROCLIST)):
+	@$(ECHO) "#"
+	@$(ECHO) "# Making $@ ..."
+	@$(MKDIR) $(EXEC_DIR)/debug
+	@$(MKDIR) $(EXEC_DIR)/release
+	$(MAKE) -C $(subst _install,,$@) EXEC_DIR=$(EXEC_DIR) install
 
-$(BIN_DIR)/app_host: $(OBJS)
-	@$(ECHO) "Linking $@..."
-	$(LD) $(LDFLAGS) $(OBJS) $(LDPROFILE_$(PROFILE)) -o $@ $(LDLIBS)
+install_rov: $(PROCLIST) $(addsuffix _install_rov,$(PROCLIST))
+$(addsuffix _install_rov,$(PROCLIST)):
+	@$(ECHO) "#"
+	@$(ECHO) "# Making $@ ..."
+	@$(MKDIR) $(EXEC_DIR)/debug
+	@$(MKDIR) $(EXEC_DIR)/release
+	$(MAKE) -C $(subst _install_rov,,$@) EXEC_DIR=$(EXEC_DIR) install_rov
 
-$(OBJ_DIR)/%.ov7A: %.c
-	@$(ECHO) "Compiling $<..."
-	@$(MKDIR) $(@D)
-	$(CC) $(CPPFLAGS) $(CFLAGS) -c -o $@ $<
+clean: $(addsuffix _clean,$(PROCLIST))
+	$(RMDIR) install
 
-clean:
-	@$(ECHO) "Cleaning..."
-	$(RMDIR) bin
+$(addsuffix _clean,$(PROCLIST)):
+	$(MAKE) -C $(subst _clean,,$@) clean
 
-install: $(BIN_DIR)/app_host
-	@$(ECHO) "Installing..."
-	@$(MKDIR) $(DESTDIR)/$(PROFILE)
-	$(CP) $< $(DESTDIR)/$(PROFILE)/
 
-# Dependencies
--include $(OBJS:.ov7A=.d)
-
+#  ======== standard macros ========
+ifneq (,$(wildcard $(XDC_INSTALL_DIR)/xdc.exe))
+    # use these on Windows
+    CP      = $(XDC_INSTALL_DIR)/bin/cp
+    ECHO    = $(XDC_INSTALL_DIR)/bin/echo
+    INSTALL = $(XDC_INSTALL_DIR)/bin/cp
+    MKDIR   = $(XDC_INSTALL_DIR)/bin/mkdir -p
+    RM      = $(XDC_INSTALL_DIR)/bin/rm -f
+    RMDIR   = $(XDC_INSTALL_DIR)/bin/rm -rf
+else
+    # use these on Linux
+    CP      = cp
+    ECHO    = echo
+    INSTALL = install
+    MKDIR   = mkdir -p
+    RM      = rm -f
+    RMDIR   = rm -rf
+endif
