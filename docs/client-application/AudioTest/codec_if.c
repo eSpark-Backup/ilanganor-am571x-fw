@@ -183,8 +183,8 @@ static unsigned int I2CCodecSendBlocking(unsigned int codecNum, unsigned int dat
 {
     I2C_Transaction i2cTransaction;
     I2C_transactionInit(&i2cTransaction);
-    i2cTransaction.masterMode=true;
-    i2cTransaction.slaveAddress = I2C_slaveAddr;
+    i2cTransaction.controllerMode=true;
+    i2cTransaction.targetAddress = I2C_slaveAddr;
     i2cTransaction.writeBuf = (uint8_t *)&slaveData[codecNum][0];
     i2cTransaction.writeCount = dataCnt;
     i2cTransaction.readBuf = (uint8_t *)NULL;
@@ -210,7 +210,7 @@ static unsigned int I2CCodecRcvBlocking(unsigned int codecNum, unsigned int data
 
     writebuf[0]=slaveData[codecNum][0];
     I2C_transactionInit(&i2cTransaction);
-    i2cTransaction.slaveAddress = I2C_slaveAddr;
+    i2cTransaction.targetAddress = I2C_slaveAddr;
     i2cTransaction.writeBuf = (uint8_t *)&writebuf[0];
     i2cTransaction.writeCount = 1;
     i2cTransaction.readBuf = (uint8_t *)&slaveData[codecNum][0];

@@ -29,13 +29,13 @@
 		<link>
 			<name>I2C_soc.c</name>
 			<type>1</type>
-			<location>E:/ti/processor_sdk_rtos_am57xx_08_01_00_09/pdk_am57xx_1_0_17/packages/ti/drv/i2c/soc/am572x/I2C_soc.c</location>
+			<location>C:/ti/processor_sdk_rtos_am57xx_08_01_00_09/pdk_am57xx_1_0_19/packages/ti/drv/i2c/soc/am572x/I2C_soc.c</location>
 		</link>
 	</linkedResources>
 	<variableList>
 		<variable>
 			<name>LIBDIR</name>
-			<value>file:/C:/ti/volib_C66_2_1_0_1/packages/ti/mas</value>
+			<value>$%7BCOM_TI_MAS_VOLIB_C66_INSTALL_DIR%7D/packages/ti/mas</value>
 		</variable>
 	</variableList>
 </projectDescription>
