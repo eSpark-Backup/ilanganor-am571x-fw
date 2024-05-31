@@ -38,7 +38,7 @@
 #include <string.h>
 
 #include "libdsp.h"
-#include "utils/logprintf.h"
+//#include "utils/logprintf.h"
 
 
 // Make this volatile, so that compiler won't optimize it away

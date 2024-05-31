@@ -29,8 +29,8 @@
 #include <time.h>
 
 #include "libdsp.h"
-#include <utils/logprintf.h>
-#include <utils/misc.h>
+//#include <utils/misc.h>
+//#include <utils/logprintf.h>
 #include <ace/Thread_Mutex.h>
 #include <ace/Guard_T.h>
 
@@ -43,6 +43,10 @@ static bool is_ext_cached[2] = {false,false};
 // used to block dsp if dsp configuration is needed
 static bool libdsp_block[2] = {false,false};
 
+
+/* Workaround */
+#define logprintf printf
+#define elements_of(x)  4
 
 
 // Make this volatile, so that compiler won't optimize it away
@@ -462,7 +466,7 @@ DSP_API int dsp_init(int dsp_number,int short_tx_queue)
     static const char* dev_name2= "/dev/dsphpi2";
     uint32_t tmp;
     printf("%s \n",dev_name);
-    SLOG_DEBUG("dsplib: %s",dev_name);
+//    SLOG_DEBUG("dsplib: %s",dev_name);
 
     libdsp_block[dsp_number] = false;
     if (dsp_number==DSP_NUM_2)
@@ -557,11 +561,11 @@ DSP_API int read_dsp_version(bool print_vendor)
 				dsp_info.MinorVersionNumber, 
 				dsp_info.BugfixReleaseNumber);
 		if (print_vendor)
-			ndlogprintf("\tDSP: %s\n", dsp_info.sVendorInfo);
-		ndlogprintf("\tDSP: %s\n\tDSP: %s\n\tDSP: interface %d\n",
-			dsp_info.sDescription,
-			dsp_info.sVersionTag,
-			dsp_info.hpi_interface_version);
+//			ndlogprintf("\tDSP: %s\n", dsp_info.sVendorInfo);
+//		ndlogprintf("\tDSP: %s\n\tDSP: %s\n\tDSP: interface %d\n",
+//			dsp_info.sDescription,
+//			dsp_info.sVersionTag,
+//			dsp_info.hpi_interface_version);
 		if (dsp_info.hpi_interface_version != HD_INTERFACE_VERSION) {
 			logprintf("!!!!DSP interface mismatch: %d instead of %d\n", dsp_info.hpi_interface_version, HD_INTERFACE_VERSION);
 			return DSPLIB_ERR_FAIL;

@@ -1,3 +1,5 @@
+set(CMAKE_CXX_STANDARD 17)
+
 
 if (${ARM})
 	set(dsp_SRCS libdsp.cpp)
