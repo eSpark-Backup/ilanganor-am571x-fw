@@ -29,7 +29,7 @@
 		<link>
 			<name>I2C_soc.c</name>
 			<type>1</type>
-			<location>C:/ti/processor_sdk_rtos_am57xx_08_01_00_09/pdk_am57xx_1_0_19/packages/ti/drv/i2c/soc/am572x/I2C_soc.c</location>
+			<location>/home/maaz/processor_sdk_rtos_am57xx_08_01_00_09/pdk_am57xx_1_0_19/packages/ti/drv/i2c/soc/am572x/I2C_soc.c</location>
 		</link>
 	</linkedResources>
 	<variableList>

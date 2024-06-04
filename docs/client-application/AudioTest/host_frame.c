@@ -1027,6 +1027,9 @@ void prepare_host_buffer(void)
 	static uint32_t HF_frame_count=0,HF_count=0;
 	HF_frame_count++;
 
+
+    printf("--> App_create:\n");
+
 //	host_ch_num=hd_host_ctrl.sHD_channel_configuration.number_of_host_dsp_channel;
 /*
 	//Check which buffer is ready from host
