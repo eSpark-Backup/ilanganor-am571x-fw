@@ -22,6 +22,17 @@
 
 
 #include <ti/sysbios/hal/Cache.h>
+#include <ti/ipc/MessageQ.h>
+
+#include <ti/cmem.h>
+#include <ti/ipc/Std.h>
+#include <ti/ipc/MessageQ.h>
+#include "HeapMem.h"
+#include "SharedRegion.h"
+#include "MemoryDefs.h"
+
+#include "../shared/AppCommon.h"
+
 #include <std.h>
 #include <stdint.h>
 #include <stdio.h>
@@ -45,8 +56,20 @@
 #include "AudioCfg.h"
 //#include "g726.h"
 
+#define BIG_DATA_POOL_SIZE 20000 // 20000 uint32_t values * 4 bytes each
+#define ROUNDUP(size, align) \
+    (UInt32)(((UInt32)(size) + ((UInt32)(align) - 1)) & ~((UInt32)(align) - 1))
+//extern far LOG_Obj LOG_trace
 
-//extern far LOG_Obj LOG_trace;
+typedef struct {
+    MessageQ_Handle         hostQue;
+    MessageQ_QueueId        slaveQue;
+    UInt16                  heapId;
+    UInt32                  msgSize;
+} App_Module;
+
+static App_Module Module;
+;
 
 Int IRAM = 0x8FE00000;
 //extern Int IRAM;
@@ -1027,8 +1050,116 @@ void prepare_host_buffer(void)
 	static uint32_t HF_frame_count=0,HF_count=0;
 	HF_frame_count++;
 
+	Int status = 0;
+    MessageQ_Params msgqParams;
+    char msgqName[32];
 
-    printf("--> App_create:\n");
+    printf("--> Message Queue setup :\n");
+
+    Module.hostQue = NULL;
+    Module.slaveQue = MessageQ_INVALIDMESSAGEQ;
+    Module.heapId = App_MsgHeapId;
+    Module.msgSize = sizeof(App_Msg);
+
+    MessageQ_Params_init(&msgqParams);
+    Module.hostQue = MessageQ_create(App_HostMsgQueName, &msgqParams);
+
+    if (Module.hostQue == NULL) {
+        printf("Host_frame: Failed creating MessageQ\n");
+        status = -1;
+        return;
+    }
+
+    sprintf(msgqName, App_SlaveMsgQueName, MultiProc_getName(remoteProcId));
+
+    do {
+        status = MessageQ_open(msgqName, &Module.slaveQue);
+        sleep(1);
+    } while (status == MessageQ_E_NOTFOUND);
+
+    if (status < 0) {
+        printf("Host_frame: Failed opening MessageQ\n");
+        return;
+    }
+
+    printf("Host_frame: Host is ready\n");
+
+    MessageQ_Params_init(&msgqParams);
+
+    /* Variables for bigdata setup */
+
+    App_Msg *msg;
+//    UInt32 *bigDataLocalPtr;
+    UInt16 regionId = 1;
+    SharedRegion_Entry *pSrEntryTrn;
+    void *sharedRegionAllocPtr = NULL;
+    CMEM_AllocParams cmemAttrs;
+    UInt32 errorCount = 0;
+    SharedRegion_Config sharedRegionConfig;
+    SharedRegion_Entry srEntry;
+
+    /* Similar setup for recieve buffer shared region allocation
+    UInt16 regionId = 1;
+    SharedRegion_Entry *pSrEntryRcv;
+    void *sharedRegionAllocPtrRcv = NULL;
+    CMEM_AllocParams cmemAttrsRcv;
+    SharedRegion_Config sharedRegionConfigRcv;
+    SharedRegion_Entry srEntryRcv;
+    */
+
+    /* Get the memory allocation using CMEM*/
+
+    printf("--> Host_frame:\n");
+
+    status = CMEM_init();
+    if (status < 0) {
+        printf("CMEM_init failed\n");
+        goto leave;
+    }
+    printf("CMEM_init success\n");
+
+    int pool_id = CMEM_getPool(BIG_DATA_POOL_SIZE);
+    if (pool_id < 0) {
+        printf("CMEM_getPool failed\n");
+        goto leave;
+    }
+    printf("CMEM_getPool success\n");
+
+    cmemAttrs.type = CMEM_HEAP;
+    cmemAttrs.flags = CMEM_CACHED;
+    cmemAttrs.alignment = 0;
+    sharedRegionAllocPtr = CMEM_allocPool(pool_id, &cmemAttrs);
+    if (sharedRegionAllocPtr == NULL) {
+        printf("CMEM_allocPool failed\n");
+        return;
+    }
+    printf("CMEM_allocPool success: Allocated buffer %p\n", sharedRegionAllocPtr);
+
+    SharedRegion_getConfig(&sharedRegionConfig);
+    status = SharedRegion_setup(&sharedRegionConfig);
+    if (status < 0) {
+        printf("SharedRegion_setup failed\n");
+        return;
+    }
+    printf("SharedRegion_setup success\n");
+
+    srEntry.base = sharedRegionAllocPtr;
+    srEntry.len = BIG_DATA_POOL_SIZE;
+    srEntry.ownerProcId = MultiProc_self();
+    srEntry.isValid = TRUE;
+    srEntry.cacheEnable = TRUE;
+    srEntry.createHeap = FALSE;
+    srEntry.cacheLineSize = 128;
+    srEntry.name = "SR1";
+
+    /* Will using this pSrEntry to be asigned to the HD_host_dsp_ctrl transfer and recieve buffer */
+    status = SharedRegion_setEntry(regionId, &srEntry);
+    pSrEntryTrn = SharedRegion_getEntryPtr(regionId);  //pointer for shared region for transferring
+
+    /* TODO: Same for the pSrEntryRcv so that it can be assigned to the recv buffer */
+//    pSrEntryRcv = SharedRegion_getEntryPtr(regionId2);  //pointer for shared region for transferring
+
+    printf("Host_frame: SR_1, base 0x%x, len=%x\n", (UInt32)pSrEntry->base, pSrEntry->len);
 
 //	host_ch_num=hd_host_ctrl.sHD_channel_configuration.number_of_host_dsp_channel;
 /*
@@ -1106,12 +1237,24 @@ void prepare_host_buffer(void)
 	if(hd_host_ctrl.sHD_audio_link.host_read_flag==0)
 	    AP_frame_host_read++;
 	//Update host audio hpi info	
+
+	/*
 	hd_host_ctrl.sHD_audio_link.dsp_host_buff_addr=(Uint32)(((Uint32)p_host_audio_buff_trn)+(active_buffer*ch_config.frames_buffer_size)); 	//address of buffer send from DSP to ARM
 	hd_host_ctrl.sHD_audio_link.host_read_flag_addr=(Uint32)&host_read_flag[active_buffer]; 	//address of flag to indicate to DSP that ARM read the data
 	hd_host_ctrl.sHD_audio_link.host_read_flag=1;	  	//content of the flag to signal that ARM read the data
 	hd_host_ctrl.sHD_audio_link.host_dsp_buff_addr=(Uint32)(((Uint32)p_host_audio_buff_rcv)+(active_buffer*ch_config.frames_buffer_size)); 	//address of buffer send from ARM to DSP
 	hd_host_ctrl.sHD_audio_link.host_write_flag_addr=(Uint32)&host_write_flag[active_buffer]; //address of flag to indicate to DSP that ARM finished writing data to DSP
 	hd_host_ctrl.sHD_audio_link.host_write_flag=1;     	//content of the flag to signal that ARM write data to DSP
+    */
+
+    hd_host_ctrl.sHD_audio_link.dsp_host_buff_addr=(Uint32)(pSrEntryTrn->base);  //address of buffer send from DSP to ARM
+    hd_host_ctrl.sHD_audio_link.host_read_flag_addr=(Uint32)&host_read_flag[active_buffer];     //address of flag to indicate to DSP that ARM read the data
+    hd_host_ctrl.sHD_audio_link.host_read_flag=1;       //content of the flag to signal that ARM read the data
+
+    // TODO: Assiging the pSrEntryRcv to the recieve buffer.
+//    hd_host_ctrl.sHD_audio_link.host_dsp_buff_addr=(Uint32)(pSrEntryRcv->base);   //address of buffer send from ARM to DSP
+//    hd_host_ctrl.sHD_audio_link.host_write_flag_addr=(Uint32)&host_write_flag[active_buffer]; //address of flag to indicate to DSP that ARM finished writing data to DSP
+//    hd_host_ctrl.sHD_audio_link.host_write_flag=1;      //content of the flag to signal that ARM write data to DSP
 
 
 	//for debug loopback host channel///////////dddddddebug	
