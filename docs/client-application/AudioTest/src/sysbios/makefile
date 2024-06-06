@@ -66,7 +66,7 @@ c62_TaskSupport_asm.obj: family/c62/TaskSupport_asm.s62 makefile
 	$(ASSEMBLE) --output_file=c62_TaskSupport_asm.obj
 
 
-BIOS.obj: BIOS.c family/c64p/EventCombiner.c family/c64p/Exception.c family/c64p/Hwi.c family/c64p/Hwi_startup.c family/c64p/TimestampProvider.c knl/Clock.c knl/Idle.c knl/Intrinsics.c knl/Queue.c knl/Semaphore.c knl/Swi.c knl/Task.c io/DEV.c io/GIO.c io/IOM_stub.c hal/Cache.c hal/Hwi.c hal/Hwi_stack.c hal/Hwi_startup.c family/shared/vayu/IntXbar.c family/shared/vayu/TimerSupport.c heaps/HeapBuf.c heaps/HeapMem.c utils/Load.c utils/Load_CPU.c timers/dmtimer/Timer.c rts/ti/ThreadLocalStorage.c family/c66/Cache.c family/c62/TaskSupport.c family/c62/IntrinsicsSupport.c gates/GateHwi.c gates/GateMutex.c xdcruntime/SemThreadSupport.c makefile
+BIOS.obj: BIOS.c family/c64p/EventCombiner.c family/c64p/Exception.c family/c64p/Hwi.c family/c64p/Hwi_startup.c family/c64p/TimestampProvider.c knl/Clock.c knl/Idle.c knl/Intrinsics.c knl/Queue.c knl/Semaphore.c knl/Swi.c knl/Task.c io/DEV.c io/GIO.c io/IOM_stub.c hal/Cache.c hal/Hwi.c hal/Hwi_stack.c hal/Hwi_startup.c family/shared/vayu/IntXbar.c family/shared/vayu/TimerSupport.c heaps/HeapBuf.c heaps/HeapMem.c gates/GateHwi.c gates/GateAll.c gates/GateSwi.c gates/GateMutexPri.c gates/GateMutex.c syncs/SyncSem.c utils/Load.c utils/Load_CPU.c timers/dmtimer/Timer.c rts/ti/ThreadLocalStorage.c family/c66/Cache.c family/c62/TaskSupport.c family/c62/IntrinsicsSupport.c xdcruntime/GateThreadSupport.c xdcruntime/SemThreadSupport.c makefile
 	@-$(call RM, $@)
 	@echo cle66 $< ...
 	@$(CC) $(BIOS_DEFS) $(XOPTS) $(INCS) $(subst makefile,,$^)
