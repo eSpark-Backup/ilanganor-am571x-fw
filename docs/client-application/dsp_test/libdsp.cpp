@@ -15,8 +15,27 @@
  *
  * =====================================================================================
  */
+//#include <xdc/std.h>
+//#include <xdc/runtime/Diags.h>
+//#include <xdc/runtime/Error.h>
+//#include <xdc/runtime/IHeap.h>
+//#include <xdc/runtime/Log.h>
+//#include <xdc/runtime/Memory.h>
+//#include <xdc/runtime/System.h>
+
+//#include <ti/ipc/Ipc.h>
+//#include <ti/ipc/MessageQ.h>
+//#include <ti/ipc/MultiProc.h>
+//#include <ti/ipc/SharedRegion.h>
+////
+//#include <ti/sysbios/heaps/HeapBuf.h>
+//#include <ti/sysbios/knl/Task.h>
+//#include <ti/ipc/HeapMemMP.h>
+//#include <ti/sysbios/hal/Cache.h>
+
 
 #include <assert.h>
+#include <stdio.h>
 #include <stdint.h>
 #include <sys/ioctl.h>
 #include <sys/stat.h>
@@ -26,13 +45,27 @@
 #include <string.h>
 #include <errno.h>
 #include <sys/time.h>
+#include <stdlib.h>
 #include <time.h>
+
+
+
+#include <ti/cmem.h>
+#include <ti/ipc/Std.h>
+#include <ti/ipc/MessageQ.h>
+#include "HeapMem.h"
+#include "Std.h"
+#include "SharedRegion.h"
+#include "MemoryDefs.h"
 
 #include "libdsp.h"
 //#include <utils/misc.h>
 //#include <utils/logprintf.h>
 #include <ace/Thread_Mutex.h>
 #include <ace/Guard_T.h>
+
+//#include "../shared/AppCommon.h"
+//#include "App.h"
 
 #define DSP_MEM
 ACE_Thread_Mutex libdsp_mutex_;
