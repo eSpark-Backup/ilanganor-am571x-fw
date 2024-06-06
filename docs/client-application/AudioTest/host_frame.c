@@ -1082,34 +1082,37 @@ leave:
  */
 Int Server_exec()
 {
+//    UInt32 main_ctrl_st_address;
+//    main_ctrl_st_address = (UInt32)address;
     Int                 status;
-    Bool                running = TRUE;
+//    Bool                running = TRUE;
     App_Msg *           msg;
     MessageQ_QueueId    queId;
 
     Log_print0(Diags_ENTRY | Diags_INFO, "--> Server_exec:");
 
-    while (running) {
+//    while (running) {//TODO: Remove this while running.
 
-        /* wait for inbound message */
-        status = MessageQ_get(Module.slaveQue, (MessageQ_Msg *)&msg,
-            MessageQ_FOREVER);
-
-        if (status < 0) {
-            goto leave;
-        }
-
-        if (msg->cmd == App_CMD_SHUTDOWN) {
-            running = FALSE;
-        }
+//        /* wait for inbound message */
+//        status = MessageQ_get(Module.slaveQue, (MessageQ_Msg *)&msg,
+//            MessageQ_FOREVER);
+//
+//        if (status < 0) {
+//            goto leave;
+//        }
+//
+//        if (msg->cmd == App_CMD_SHUTDOWN) {
+//            running = FALSE;
+//        }
 
         /* process the message */
-        Log_print1(Diags_INFO, "Server_exec: processed cmd=0x%x", msg->cmd);
+//        Log_print1(Diags_INFO, "Server_exec: processed cmd=0x%x", msg->cmd);
 
         /* send message back */
         queId = MessageQ_getReplyQueue(msg); /* type-cast not needed */
+        msg->u.bigDataSharedDesc.sharedPtr = &hd_host_ctrl;
         MessageQ_put(queId, (MessageQ_Msg)msg);
-    } /* while (running) */
+//    } /* while (running) */
 
 leave:
     Log_print1(Diags_EXIT, "<-- Server_exec: %d", (IArg)status);
@@ -1287,6 +1290,8 @@ void prepare_host_buffer(void)
 	Cache_wbInv(&hd_host_ctrl, sizeof(hd_host_ctrl),Cache_Type_ALL, TRUE);
 	Cache_wbInv(p_host_audio_buff_trn, ch_config.frames_buffer_size*2,Cache_Type_ALL, TRUE);
 				
+	/* Transfer the address of the structure via messageQ to Host */
+    Server_exec();
 }
 
 void prepare_host_in_buffer(void)
