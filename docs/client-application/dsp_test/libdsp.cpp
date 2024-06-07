@@ -50,13 +50,13 @@
 
 
 
-#include <ti/cmem.h>
+//#include <ti/cmem.h>
 #include <ti/ipc/Std.h>
 #include <ti/ipc/MessageQ.h>
-#include "HeapMem.h"
-#include "Std.h"
-#include "SharedRegion.h"
-#include "MemoryDefs.h"
+//#include "HeapMem.h"
+//#include "Std.h"
+//#include "SharedRegion.h"
+//#include "MemoryDefs.h"
 
 #include "libdsp.h"
 //#include <utils/misc.h>
@@ -64,8 +64,7 @@
 #include <ace/Thread_Mutex.h>
 #include <ace/Guard_T.h>
 
-//#include "../shared/AppCommon.h"
-//#include "App.h"
+#include "../shared/AppCommon.h"
 
 #define DSP_MEM
 ACE_Thread_Mutex libdsp_mutex_;
@@ -493,8 +492,61 @@ struct ToneConf
 	unsigned int freq;
 };
 
+
+typedef struct {
+    MessageQ_Handle         hostQue;
+    MessageQ_QueueId        slaveQue;
+    UInt16                  heapId;
+    UInt32                  msgSize;
+} App_Module;
+
+static App_Module Module;
+
+Int App_create(UInt16 remoteProcId)
+{
+    Int status = 0;
+    MessageQ_Params msgqParams;
+    char msgqName[32];
+
+    printf("--> App_create:\n");
+
+    Module.hostQue = NULL;
+    Module.slaveQue = MessageQ_INVALIDMESSAGEQ;
+    Module.heapId = App_MsgHeapId;
+    Module.msgSize = sizeof(App_Msg);
+
+    MessageQ_Params_init(&msgqParams);
+    Module.hostQue = MessageQ_create(App_HostMsgQueName, &msgqParams);
+
+    if (Module.hostQue == NULL) {
+        printf("App_create: Failed creating MessageQ\n");
+        status = -1;
+        goto leave;
+    }
+
+    sprintf(msgqName, App_SlaveMsgQueName, MultiProc_getName(remoteProcId));
+
+    do {
+        status = MessageQ_open(msgqName, &Module.slaveQue);
+        sleep(1);
+    } while (status == MessageQ_E_NOTFOUND);
+
+    if (status < 0) {
+        printf("App_create: Failed opening MessageQ\n");
+        goto leave;
+    }
+
+    printf("App_create: Host is ready\n");
+
+leave:
+    printf("<-- App_create:\n");
+    return status;
+}
+
+
 DSP_API int dsp_init(int dsp_number,int short_tx_queue)
 {
+    App_create(MultiProc_getId("HOST"));
     static const char* dev_name = "/dev/mem";
     static const char* dev_name2= "/dev/dsphpi2";
     uint32_t tmp;
@@ -532,14 +584,20 @@ DSP_API int dsp_init(int dsp_number,int short_tx_queue)
         	::ioctl(_hpi_handle1, HPICTLSHORTTXQUE, &tmp);
         }
 #else
-        unsigned int base = 0x8D000000;//0x40500000;
-        int size= sizeof(HD_host_dsp_ctrl);
-        if ((dspSharedMem = (char*) mmap(0,size,PROT_READ|PROT_WRITE, MAP_SHARED, _hpi_handle1,
-                                base)) == (caddr_t) -1) {
-            printf("Error while maping memory\n");
-            return -2;
-        }
-        printf("sizeof(HD_host_dsp_ctrl) %d  dspSharedMem: 0x%08x\n",size, &dspSharedMem[0]);
+//        unsigned int base = 0x8D000000;//0x40500000;
+//        int size= sizeof(HD_host_dsp_ctrl);
+//        if ((dspSharedMem = (char*) mmap(0,size,PROT_READ|PROT_WRITE, MAP_SHARED, _hpi_handle1,
+//                                base)) == (caddr_t) -1) {
+//            printf("Error while maping memory\n");
+//            return -2;
+//        }
+        Int                 status;
+        App_Msg *           msg;
+        status = MessageQ_get(Module.hostQue, (MessageQ_Msg *)&msg,
+                    MessageQ_FOREVER);
+        dspSharedMem = (char*)msg->u.bigDataSharedDesc.sharedPtr;
+//        printf("sizeof(HD_host_dsp_ctrl) %d  dspSharedMem: 0x%08x\n",size, &dspSharedMem[0]);
+        printf("dspSharedMem: 0x%08x\n",&dspSharedMem[0]);
 #endif
     }
     return DSPLIB_ERR_OK;
